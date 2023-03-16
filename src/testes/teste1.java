@@ -11,7 +11,7 @@ public class teste1 {
    ArrayList<Cliente> clientes =  new ArrayList<Cliente>();
    Cliente c = new Cliente("cecilia", "86796984072");
    clientes.add(c);
-
+    
    System.out.println(clientes);
 
    Agencia a = new Agencia("rua salvaodr dalli", 200);
@@ -20,5 +20,7 @@ public class teste1 {
    System.out.println(ce.toString());
    ce.creditar(200);
    System.out.println(ce.toString());
+
   }
+
 }

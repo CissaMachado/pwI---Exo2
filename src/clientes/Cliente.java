@@ -1,7 +1,8 @@
 package clientes;
 
+import validadores.Validador;
 
-public class Cliente {
+public class Cliente implements Validador {
 
   private String nome;
   private String cpf;
@@ -24,5 +25,8 @@ public class Cliente {
   public String toString() {
       return super.toString() + "\nNome:" + nome + "\n Cpf:" + cpf;
   }
+
+
+  
   
 }
