@@ -9,7 +9,7 @@ import clientes.Cliente;
 import contas.ContaEspecial;
 
 
-// menu sem a validaão do cpf e sem Utilizar ENUM
+// menu ***sem a validaão do cpf e sem Utilizar ENUM***
 
 public class Menu {
 
@@ -38,10 +38,10 @@ public class Menu {
           break;
           case 2: //Pesquisa de conta especial por número
             boolean flag = false; // nesse caso a flag ou bandeira está servindo para indicar ou não a ocorrencia de um fato
-            if(contas != null & contas.isEmpty()){
+            if(contas!=null & contas.isEmpty()){
                 long numPesq = Long.parseLong(JOptionPane.showInputDialog("Informe o numero da conta do cliente para pesquisa"));
                 for(ContaEspecial conta: contas){
-                    if(conta != null && conta.getNumero()==numPesq){
+                    if(conta!=null && conta.getNumero()==numPesq){
                        JOptionPane.showConfirmDialog(null, "A conta informada já está cadastrada no sistema");   
                        flag = true;
                       }
@@ -53,10 +53,10 @@ public class Menu {
           break;
           case 3: // buscar numero de agencia relacionada a determinada conta especial
           flag = false;
-          if(contas != null && contas.isEmpty()){
-            int numPesq = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da agencia do cliente para pesquisa"));
+          if(contas!=null && contas.isEmpty()){
+            int numPes = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da agencia do cliente para pesquisa"));
             for(ContaEspecial conta : contas){
-                if(conta != null && conta.getNumero()==numPesq){
+                if(conta!=null && conta.getNumero()==numPes){
                   JOptionPane.showConfirmDialog(null, "A agencia informada pertence a conta: " + conta.getAgencia().toString());
                   flag = true;
                 }
@@ -67,6 +67,10 @@ public class Menu {
           }
           break;
           case 4:
+          break;
+          case 5:
+          break;
+          case 6: System.exit(0);
           break;
       }
     }
